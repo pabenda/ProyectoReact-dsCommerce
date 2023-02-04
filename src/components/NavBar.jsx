@@ -8,15 +8,16 @@ const NavBar = () => {
             <div>
                 <h3>dsCommerce - Materiales para impresión 3d</h3>
             </div>
-            <div>
+            <div className='menuDesplegable'>
                 <Select placeholder='Elija una opción'>
                     <option value='option1'>Quienes Somos</option>
                     <option value='option2'>Productos</option>
                     <option value='option3'>Novedades</option>
                 </Select>
             </div>
-            <div>
-                <CartWidget />(0)
+            <div className='cartWidget'>
+                <CartWidget />
+                <span>(0)</span>
             </div>
         </div>
     )
