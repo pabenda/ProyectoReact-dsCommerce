@@ -10,9 +10,9 @@ const NavBar = () => {
             </div>
             <div className='menuDesplegable'>
                 <Select placeholder='Elija una opción'>
-                    <option value='option1'>Quienes Somos</option>
-                    <option value='option2'>Productos</option>
-                    <option value='option3'>Novedades</option>
+                    <option value='option1'>Filamentos</option>
+                    <option value='option2'>Impresoras</option>
+                    <option value='option3'>Repuestos</option>
                 </Select>
             </div>
             <div className='cartWidget'>
