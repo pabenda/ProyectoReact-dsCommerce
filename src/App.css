@@ -27,3 +27,16 @@
   font-size: larger;
   font-weight: 700;
 }
+
+.imagenWelcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.footer {
+display: flex;
+justify-content: center;
+font-weight: 400;
+}
