@@ -1,10 +1,12 @@
 import React from 'react'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
     return (
         <div>
-            <img src="./src/assets/cart.png" alt="" />
+            <Link to="/Cart">
+                <img src="./src/assets/cart.png" alt="" />
+            </Link>
         </div>
     )
 }
