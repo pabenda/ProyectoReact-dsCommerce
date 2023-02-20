@@ -1,0 +1,16 @@
+.NavBarLoc {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 400;
+    font-size: 24px;
+    background-color: cadetblue;
+}
+
+.cartWidget {
+    display: flex;
+}
+
+.botonCatalogo {
+    border: solid;
+    border-color: aliceblue;
+}

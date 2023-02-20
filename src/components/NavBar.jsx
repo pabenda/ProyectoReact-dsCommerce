@@ -2,12 +2,17 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import CartWidget from './CartWidget'
 import { Select } from '@chakra-ui/react'
+import "../App.css";
+
 
 const NavBar = () => {
     return (
         <div className='NavBarLoc'>
             <div>
                 <Link to={"/"}>dsCommerce Impresión 3d</Link>
+            </div>
+            <div className='botonCatalogo'>
+                <Link to={"/catalogue"}>Catálogo</Link>
             </div>
             <div className='menuDesplegable'>
                 <Select placeholder='Elija una opción'>
