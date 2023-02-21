@@ -78,3 +78,31 @@
     border: solid;
     border-color: aliceblue;
 }
+
+.menuDesp {
+    font-weight: 500;
+    width: 300px;
+    padding: 1%;
+    font-size: 25px;
+}
+
+.opcMenu {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+}
+
+.botonCatalogo {
+    border: solid;
+    border-color: aliceblue;
+    width: 115px;
+    padding: 5px;
+}
+
+.linkMarca {
+    font-weight: 500;
+}
+
+.opMenuItem {
+    padding-right: 2%;
+}
