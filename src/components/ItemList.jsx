@@ -1,9 +1,23 @@
-import React from 'react'
-
-const ItemList = () => {
+import Item from "./Item";
+import { Container } from "@chakra-ui/react";
+const ItemList = ({ elems }) => {
   return (
-    <div>ItemList</div>
-  )
-}
+    <>
+      <Container maxW="container.sm" className="catprincipal">
+        {elems?.map((elem) => (
+          <Item
+            key={elem.id}
+            id={elem.id}
+            name={elem.name}
+            description={elem.description}
+            price={elem.price}
+            stock={elem.stock}
+            category={elem.category}
+          />
+        ))}
+      </Container>
+    </>
+  );
+};
 
-export default ItemList
+export default ItemList;

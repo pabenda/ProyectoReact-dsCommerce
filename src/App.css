@@ -2,42 +2,60 @@
     margin: 0 auto;
     padding: 2rem;
     background-color: cadetblue;
-  }
-  
-  .NavBarLoc {
+}
+
+.NavBarLoc {
     display: flex;
     justify-content: space-around;
     background-color: lightslategray;
     align-items: center;
-    font-weight: 500;
-  }
-  
-  .cartWidget {
+    font-weight: 700;
+    padding-bottom: 1%;
+}
+
+.menuDesp {
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.cartWidget {
     display: flex;
     justify-content: right;
-  }
-  
-  .menuDesplegable {
-    background-color: lightslategray;
-  }
-  
-  .itemListC {
-    margin: 5%;
-    margin-left: 37%;
-    font-size: larger;
-    font-weight: 700;
-  }
-  
-  .imagenWelcome {
+}
+
+.imagenWelcome {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 3%;
-  }
-  
-  .footer {
-  display: flex;
-  justify-content: center;
-  font-weight: 400;
-  font-size: 20px;
-  }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0%;
+}
+
+.tarjetapp {
+    width: 18rem;
+    margin: 1rem;
+}
+
+.tarjetapie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contador {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.catprincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

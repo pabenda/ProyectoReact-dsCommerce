@@ -2,8 +2,9 @@ import React from 'react'
 
 const ItemCount = () => {
   return (
-    <div>ItemCount</div>
+    <div className='contador'>- 0 + Reset</div>
   )
 }
 
 export default ItemCount
+

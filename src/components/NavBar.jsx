@@ -14,7 +14,7 @@ const NavBar = () => {
             <div className='botonCatalogo'>
                 <Link to={"/catalogue"}>Catálogo</Link>
             </div>
-            <div className='menuDesplegable'>
+            <div className='menuDesp'>
                 <Select placeholder='Elija una opción'>
                     <option value='/category/${"Filamentos"}'>Filamentos</option>
                     <option value='/category/${"Impresoras"}'>Impresoras</option>
