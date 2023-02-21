@@ -1,7 +1,8 @@
 :root {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: 300;
-  background-color: cadetblue;
+  background-image: linear-gradient(to bottom, #333333, #dddddd);
+
 }

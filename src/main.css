@@ -3,11 +3,9 @@
     justify-content: space-around;
     font-weight: 400;
     font-size: 24px;
-    background-color: cadetblue;
+    background-image: linear-gradient(to bottom, #333333, #dddddd);
+
 }
 
-.cartWidget {
-    display: flex;
-}
 
 

@@ -1,58 +1,58 @@
 [
-    {
-      "id": 1,
-      "name": "Filamento 1",
-      "price": 3750,
-      "description":
-        "Filamento PLA para impresión 3d, ver condiciones específicas",
-      "stock": 3,
-      "category": "Filamentos"
-    },
-    {
-      "id": 2,
-      "name": "Filamento 2",
-      "price": 3750,
-      "description":
-        "Filamento PLA para impresión 3d, ver condiciones específicas",
-      "stock": 6,
-      "category": "Filamentos"
-    },
-    {
-      "id": 3,
-      "name": "Filamento 3",
-      "price": 3750,
-      "description":
-        "Filamento PLA para impresión 3d, ver condiciones específicas",
-      "stock": 2,
-      "category": "Filamentos"
-    },
-    {
-      "id": 4,
-      "name": "Impresora 1",
-      "price": 150000,
-      "description":
-        "Impresora 3d autonivelado automático, ver más características especiales",
-      "stock": 5,
-      "category": "Impresoras"
-    },
-
-    {
-        "id": 5,
-        "name": "Impresora 2",
-        "price": 270000,
-        "description":
-          "Impresora 3d autonivelado automático, ver más características especiales",
-        "stock": 2,
-        "category": "Impresoras"
-      },
-
-      {
-        "id": 6,
-        "name": "Repuesto 1",
-        "price": 600,
-        "description":
-          "Boquilla de impresión recambio",
-        "stock": 505,
-        "category": "Repuestos"
-      }
-  ]
+  {
+    "id": 1,
+    "name": "PLA Azul",
+    "price": 3750,
+    "description": "Filamento PLA para impresión 3d, ver condiciones específicas",
+    "stock": 3,
+    "category": "Filamentos"
+  },
+  {
+    "id": 2,
+    "name": "PLA Rojo",
+    "price": 3750,
+    "description": "Filamento PLA para impresión 3d, ver condiciones específicas",
+    "stock": 6,
+    "category": "Filamentos"
+  },
+  {
+    "id": 3,
+    "name": "PLA Amarillo",
+    "price": 3750,
+    "description": "Filamento PLA para impresión 3d, ver condiciones específicas",
+    "stock": 2,
+    "category": "Filamentos"
+  },
+  {
+    "id": 4,
+    "name": "Ender 3 V2",
+    "price": 150000,
+    "description": "Impresora 3d autonivelado automático",
+    "stock": 5,
+    "category": "Impresoras"
+  },
+  {
+    "id": 5,
+    "name": "Ender CR10",
+    "price": 270000,
+    "description": "Impresora 3d autonivelado automático",
+    "stock": 2,
+    "category": "Impresoras"
+  },
+  {
+    "id": 6,
+    "name": "Boquilla Ender",
+    "price": 600,
+    "description": "Boquilla de impresión recambio",
+    "stock": 505,
+    "category": "Repuestos"
+  },
+  {
+    "id": 7,
+    "name": "Manga Teflón",
+    "price": 1500,
+    "description": "Manguera de teflón",
+    "stock": 20,
+    "category": "Repuestos"
+  }
+]

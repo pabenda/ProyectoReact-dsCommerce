@@ -9,7 +9,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <Center bg="grey" h="50px" color="black">
-        <Heading as="h3" size="xl">
+        <Heading as="h3" size="l">
           Productos por Categoría
         </Heading>
       </Center>

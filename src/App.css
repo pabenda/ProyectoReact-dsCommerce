@@ -1,7 +1,11 @@
 #root {
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: cadetblue;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #333333, #dddddd);
+    width: 100%;
+}
+
+.cartWidget {
+    display: flex;
 }
 
 .NavBarLoc {
@@ -10,12 +14,13 @@
     background-color: lightslategray;
     align-items: center;
     font-weight: 700;
-    padding-bottom: 1%;
+    border: solid;
+    color: aliceblue;
 }
 
 .menuDesp {
     font-weight: 800;
-    font-size: x-large;
+    font-size: small;
 }
 
 .cartWidget {
@@ -30,23 +35,29 @@
     padding: 3%;
 }
 
+.imgWelc {
+    border-radius: 20px;
+    width: 45%;
+}
+
 .footer {
     display: flex;
     justify-content: center;
-    font-weight: 400;
-    font-size: 20px;
-    margin: 0%;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
 }
 
 .tarjetapp {
-    width: 250px;
-    margin: 16px;
+    width: 200px;
+    height: 330px;
+    margin: 5px;
 }
 
 .tarjetapie {
+    font-size: small;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: top;
 }
 
 .contador {
@@ -64,9 +75,10 @@
     display: flex;
     flex-direction: column;
     margin-left: 30%;
-    font-size: x-large;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    font-size: small;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    color: aliceblue;
 }
 
 .lineaForm {
@@ -83,13 +95,14 @@
     font-weight: 500;
     width: 300px;
     padding: 1%;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .opcMenu {
     display: flex;
     flex-direction: row;
     padding: 2%;
+    font-size: medium;
 }
 
 .botonCatalogo {
@@ -97,10 +110,12 @@
     border-color: aliceblue;
     width: 115px;
     padding: 5px;
+    font-size: medium;
 }
 
 .linkMarca {
     font-weight: 500;
+    font-size: medium;
 }
 
 .opMenuItem {

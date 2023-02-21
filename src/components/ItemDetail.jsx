@@ -1,13 +1,5 @@
 import {
-  Center,
-  Card,
-  CardBody,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  CardFooter,
-  Divider,
+  Center, Card, CardBody, Image, Stack, Heading, Text, CardFooter, Divider,
 } from "@chakra-ui/react";
 import elemImage from "../assets/filazu.png";
 import { useParams } from "react-router-dom";
@@ -22,34 +14,30 @@ const ItemDetail = ({ elems }) => {
     <>
       {elemFilter.map((elem) => (
         <div key={elem.id}>
-          <Center p="16px">
+          <Center p="14px">
             <Card className="tarjetapp">
               <CardBody>
                 <Image borderRadius="lg" src={elemImage} />
-                <Stack mt="3" spacing="3">
-                  <Heading size="md">{elem.name}</Heading>
-                  <Text color="black" fontSize="xl">
+                <Stack mt="2" spacing="0.5">
+                  <Heading size="sm">{elem.name}</Heading>
+                  <Text color="black" fontSize="sm" lineHeight="0.8">
                     Info: {elem.description}
                   </Text>
-                  <Text color="black" fontSize="xl">
+                  <Text color="black" fontSize="sm" lineHeight="0.8">
                     Categoría: {elem.category}
                   </Text>
-                  <Text color="black" fontSize="xl">
+                  <Text color="black" fontSize="sm" lineHeight="0.8">
                     Stock: {elem.stock}
                   </Text>
-                  <Text color="black" fontSize="xl">
+                  <Text color="black" fontSize="sm" lineHeight="0.8">
                     Price: $ {elem.price}
                   </Text>
                 </Stack>
               </CardBody>
-              <Divider />
               <CardFooter className="tarjetapie">
-                <ItemCount
-                  stock={elem.stock}
-                  id={elem.id}
-                  price={elem.price}
-                  name={elem.name}
-                />
+              <Text color="black" fontSize="sm" lineHeight="0.8">
+                  -  0   +   (Agregar al carrito)
+                </Text>
               </CardFooter>
             </Card>
           </Center>

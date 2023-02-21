@@ -3,7 +3,7 @@ import "../App.css";
 
 const Footer = () => {
   return (
-    <div className='footer'>Todos los derechos reservados - dsCommerce</div>
+    <div className='footer'>Todos los derechos reservados - dsCommerce 2023</div>
   )
 }
 
