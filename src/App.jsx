@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import "./App.css";
 import "./main.css";
 
-
 function App() {
   return (
       <BrowserRouter>

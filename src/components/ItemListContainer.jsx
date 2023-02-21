@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import Data from "../data.json";
 import { useParams } from "react-router-dom";
