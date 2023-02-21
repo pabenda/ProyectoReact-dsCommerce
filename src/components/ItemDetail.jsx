@@ -6,10 +6,8 @@ import {
   Stack,
   Heading,
   Text,
-  Button,
   CardFooter,
   Divider,
-  Alert,
 } from "@chakra-ui/react";
 import elemImage from "../assets/filazu.png";
 import { useParams } from "react-router-dom";
