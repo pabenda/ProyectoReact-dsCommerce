@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import LinkFila from '../events/LinkFila';
+import LinkImpre from '../events/LinkImpre';
+import LinkRepue from '../events/LinkRepue';
 
 const MenuDespCat = () => {
 
@@ -11,13 +14,13 @@ const MenuDespCat = () => {
             {menuAbierto && (
                 <div className="opcMenu">
                     <div className='opMenuItem'>
-                        <Link to={`/category/${"Filamentos"}`}>Filamentos</Link>
+                        <LinkFila />
                     </div>
                     <div className='opMenuItem'>
-                        <Link to={`/category/${"Impresoras"}`}>Impresoras</Link>
+                        <LinkImpre />
                     </div>
                     <div className='opMenuItem'>
-                        <Link to={`/category/${"Repuestos"}`}>Repuestos</Link>
+                        <LinkRepue />
                     </div>
                 </div>
             )}

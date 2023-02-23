@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import LinkBrand from '../events/LinkBrand';
+import LinkCatalog from '../events/LinkCatalog';
 import CartWidget from "./CartWidget";
 import "../App.css";
 import MenuDespCat from "./MenuDespCat";
@@ -12,7 +13,7 @@ const NavBar = () => {
                 <LinkBrand />
             </div>
             <div className='botonCatalogo'>
-                <Link to={"/catalogue"}>Catálogo</Link>
+                <LinkCatalog />
             </div>
             <div className='menuDesp'>
                 <MenuDespCat />
