@@ -14,7 +14,7 @@ function LinkRepue() {
 
   return (
     <div>
-      <Link to={"/"} 
+      <Link to={`/category/${"Repuestos"}`} 
             style={{ color: linkColor }} 
             onMouseEnter={mouseEntra} 
             onMouseLeave={mouseSale}>Repuestos</Link>

@@ -14,7 +14,7 @@ function LinkFila() {
 
   return (
     <div>
-      <Link to={"/"} 
+      <Link to={`/category/${"Filamentos"}`} 
             style={{ color: linkColor }} 
             onMouseEnter={mouseEntra} 
             onMouseLeave={mouseSale}>Filamentos</Link>

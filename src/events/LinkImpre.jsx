@@ -14,7 +14,7 @@ function LinkImpre() {
 
   return (
     <div>
-      <Link to={"/"} 
+      <Link to={`/category/${"Impresoras"}`} 
             style={{ color: linkColor }} 
             onMouseEnter={mouseEntra} 
             onMouseLeave={mouseSale}>Impresoras</Link>
