@@ -1,4 +1,4 @@
-# dsCommerce - sirio para venta de productos para impresión 3D
+# dsCommerce - sitio para venta de productos para impresión 3D
 
 [Sitio desarrollado en React Js para el curso 2023 de Codehouse](www.coderhouse.com.ar)
 
