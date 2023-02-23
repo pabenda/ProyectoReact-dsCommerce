@@ -1,5 +1,5 @@
 import {
-  Center, Card, CardBody, Image, Stack, Heading, Text, CardFooter, Divider,
+  Center, Card, CardBody, Button, Image, Stack, Heading, Text, CardFooter, Divider,
 } from "@chakra-ui/react";
 import elemImage from "../assets/filazu.png";
 import { useParams } from "react-router-dom";
@@ -34,9 +34,10 @@ const ItemDetail = ({ elems }) => {
                   </Text>
                 </Stack>
               </CardBody>
-              <CardFooter className="tarjetapie">
-              <Text color="black" fontSize="sm" lineHeight="0.8">
-                  -  0   +   (Agregar al carrito)
+              <CardFooter color="black" lineHeight="1.3">
+                <Text>
+                  <ItemCount />
+                  <Button fontSize="xs" mx="6" colorScheme="blue" size="xs">Agregar a Carro</Button>
                 </Text>
               </CardFooter>
             </Card>

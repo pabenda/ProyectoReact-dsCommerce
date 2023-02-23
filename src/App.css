@@ -54,12 +54,6 @@
     margin: 5px;
 }
 
-.tarjetapie {
-    font-size: small;
-    display: flex;
-    align-items: top;
-}
-
 .contador {
     font-size: larger;
     font-weight: 500;
@@ -121,3 +115,11 @@
 .opMenuItem {
     padding-right: 2%;
 }
+
+.textoContador {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: space-around;
+ }
