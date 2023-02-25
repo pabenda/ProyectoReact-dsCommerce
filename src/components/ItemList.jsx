@@ -3,7 +3,7 @@ import { Container } from "@chakra-ui/react";
 const ItemList = ({ elems }) => {
   return (
     <>
-      <Container maxW="container.sm" className="catprincipal">
+      <Container maxW="container.md" className="catprincipal">
         {elems?.map((elem) => (
           <Item
             key={elem.id}
