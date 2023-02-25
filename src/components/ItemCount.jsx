@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-const ItemCount = () => {
-  const [stock, setStock] = useState(10);
+const ItemCount = (props) => {
+  
+  const [stock, setStock] = useState(props.stock);
   const [count, setCount] = useState(0);
 
   const increment = () => {
-    if (stock > 0) {
-      setStock(stock - 1);
+    if (stock > 0 && count <= stock) {
+            setStock(stock - 1);
       setCount(count + 1);
     }
   }
@@ -19,7 +20,7 @@ const ItemCount = () => {
   }
 
   const reset = () => {
-    setStock(10);
+    setStock(props.stock);
     setCount(0);
   }
 
