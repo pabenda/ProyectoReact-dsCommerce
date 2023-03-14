@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 const ItemCount = (props) => {
-  
+
   const [stock, setStock] = useState(props.stock);
   const [count, setCount] = useState(0);
+  console.log(stock);
 
   const increment = () => {
-    if (stock > 0 && count <= stock) {
-            setStock(stock - 1);
+    if (stock > 0 && count < stock) {
+      setStock(stock - 1);
       setCount(count + 1);
     }
   }
@@ -20,7 +21,7 @@ const ItemCount = (props) => {
   }
 
   const reset = () => {
-    setStock(props.stock);
+    setStock(stock + count);
     setCount(0);
   }
 
@@ -30,7 +31,7 @@ const ItemCount = (props) => {
         <button onClick={decrement}>-</button>
       </div>
       <div>
-        <p> {count}</p>
+        {count}
       </div>
       <div>
         <button onClick={increment}>+</button>
