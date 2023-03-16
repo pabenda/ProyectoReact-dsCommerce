@@ -49,7 +49,7 @@ const ItemCount = ({ stock, id, price, name }) => {
       <Flex alignItems="center">
         <ButtonGroup size="sm" isAttached variant="outline">
           {count < 1 ? (
-            <Tooltip label="minimum stock reached" placement="bottom">
+            <Tooltip label="mínimo de stock" placement="bottom">
               <IconButton icon={<MinusIcon />} isDisabled />
             </Tooltip>
           ) : (
@@ -61,13 +61,13 @@ const ItemCount = ({ stock, id, price, name }) => {
               variant="solid"
               colorScheme="blue"
             >
-              Add to cart: {count}
+              Comprar {count}
             </Button>
           </Center>
           {count < stock ? (
             <IconButton icon={<AddIcon />} onClick={addQty} />
           ) : (
-            <Tooltip label="stock limit reached" placement="bottom">
+            <Tooltip label="límite de stock" placement="bottom">
               <IconButton icon={<AddIcon />} isDisabled />
             </Tooltip>
           )}

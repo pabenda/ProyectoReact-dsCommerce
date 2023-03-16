@@ -35,9 +35,9 @@ const Cart = () => {
 
   return (
     <>
-      <Center bg="#D6EAF8" h="100px" color="black">
-        <Heading as="h2" size="2xl">
-          Cart
+      <Center bg="grey" h="70px" color="black">
+        <Heading as="h3" size="xl">
+          Carro de Compras
         </Heading>
       </Center>
       {cart.length === 0 ? (
@@ -62,11 +62,8 @@ const Cart = () => {
                   <Text>Subtotal $ {itemSubtotal.toFixed(2)}</Text>
                 </CardBody>
                 <CardFooter>
-                  <Button
-                    colorScheme="red"
-                    onClick={() => handleDeleteItem(item.id)}
-                  >
-                    Delete from cart
+                  <Button colorScheme="red" onClick={() => handleDeleteItem(item.id)}>
+                    Eliminar artículo
                   </Button>
                 </CardFooter>
               </Card>

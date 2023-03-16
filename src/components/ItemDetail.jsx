@@ -15,6 +15,8 @@ import ItemCount from "./ItemCount";
 import { useEffect, useState } from "react";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
+import productImage from "../assets/filazu.png";
+
 const ItemDetail = ({ elems }) => {
   const { id } = useParams();
 
@@ -43,7 +45,7 @@ const ItemDetail = ({ elems }) => {
           <Center p="1rem">
             <Card className="card-main">
               <CardBody>
-                <Image borderRadius="lg" src={elem.image} />
+                <Image borderRadius="lg" src={productImage} />
                 <Stack mt="6" spacing="3">
                   <Heading size="md">{elem.name}</Heading>
                   <Text color="blue.800" fontSize="l">
