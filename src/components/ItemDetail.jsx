@@ -30,7 +30,7 @@ const ItemDetail = ({ elems }) => {
                     Stock: {elem.stock}
                   </Text>
                   <Text color="black" fontSize="sm" lineHeight="0.8">
-                    Price: $ {elem.price}
+                    Precio: $ {elem.price}
                   </Text>
                 </Stack>
               </CardBody>
