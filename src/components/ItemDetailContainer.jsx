@@ -1,8 +1,22 @@
 import ItemDetail from "./ItemDetail";
-import Data from "../data.json";
-const ItemDetailContainer = () => {
+import { useState, useEffect } from "react";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
-  return <ItemDetail elems={Data} />;
+const ItemDetailContainer = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const db = getFirestore();
+    const elemsCollection = collection(db, "productos");
+    getDocs(elemsCollection).then((querySnapshot) => {
+      const elems = querySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setData(elems);
+    });
+  }, []);
+
+  return <ItemDetail elems={data} />;
 };
 
 export default ItemDetailContainer;

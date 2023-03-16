@@ -7,20 +7,25 @@ import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import "./App.css";
 import "./main.css";
+import { ShoppingCartProvider } from "./contexts/ShoppingCartContext";
+
 
 function App() {
   return (
+    <ShoppingCartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Welcome />} />
           <Route exact path="/catalogue" element={<ItemListContainer />} />
-          <Route exact path="/category/:category" element={<ItemListContainer />}/>
+          <Route exact path="/category/:category" element={<ItemListContainer />} />
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
           <Route exact path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </BrowserRouter>
+    </ShoppingCartProvider>
+
   );
 }
 
