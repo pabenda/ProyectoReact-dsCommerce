@@ -4,7 +4,7 @@ import "../App.css";
 const ItemList = ({ elems }) => {
   return (
     <>
-      <div className="catprincipal">
+      <div className="catPrincipal">
         {elems?.map((elem) => (
           <Item
             key={elem.id}

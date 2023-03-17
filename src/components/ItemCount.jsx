@@ -37,27 +37,27 @@ const ItemCount = ({ stock, id, price, name }) => {
 
   return (
     <>
-      <div className="item-count">
+      <div className="itemCount">
         <button
-          className="item-count__boton"
+          className="itemCountBoton"
           disabled={count < 1}
           onClick={restarQ}
         >
           -
         </button>
-        <span className="item-count__contador">{count}</span>
+        <span className="itemCountContador">{count}</span>
         <button
-          className="item-count__boton"
+          className="itemCountBoton"
           disabled={count >= stock}
           onClick={sumarQ}
         >
           +
         </button>
-        <button className="item-count__boton" onClick={resetCount}>
+        <button className="itemCountBoton" onClick={resetCount}>
           Reset
         </button>
         <button
-          className="item-count__agrega"
+          className="itemCountAgrega"
           onClick={addToCart}
           disabled={count < 1 || count > stock}
         >

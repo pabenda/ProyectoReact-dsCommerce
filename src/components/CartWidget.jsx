@@ -12,10 +12,10 @@ const CartWidget = () => {
 
   return (
     <>
-      <div className="cart">
+      <div>
         <Link to="/cart">
-          <button className="cart-button">
-            <span className="material-symbols-outlined">Carro de Compras </span>
+          <button className="cartButton">
+            <span>Carro de Compras </span>
             <span> (</span>
             <span>{quantity}</span>
             <span> )</span>

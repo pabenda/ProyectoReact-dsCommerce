@@ -7,7 +7,7 @@ import MenuDespCat from "./MenuDespCat";
 
 const NavBar = () => {
     return (
-        <div className='NavBarLoc'>
+        <div className='navBarLoc'>
             <div className='linkMarca'>
                 <LinkBrand />
             </div>
@@ -17,7 +17,7 @@ const NavBar = () => {
             <div className='menuDesp'>
                 <MenuDespCat />
             </div>
-            <div className='cartWidget'>
+            <div>
                 <CartWidget />
             </div>
         </div>

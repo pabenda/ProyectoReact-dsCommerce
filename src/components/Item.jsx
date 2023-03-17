@@ -8,19 +8,19 @@ const Item = ({ id, name, stock, category }) => {
     <div>
       <div key={id} className="item">
         <div className="card">
-          <div className="card-body">
-            <img src={elem} alt="" className="card-image" />
-            <div className="card-content">
-              <h4 className="card-title">{name}</h4>
-              <span className="card-category">Cat: {category}</span>
+          <div className="cardBody">
+            <img src={elem} alt="" className="cardImage" />
+            <div className="cardContent">
+              <h4 className="cardTitle">{name}</h4>
+              <span className="cardCategory">Cat: {category}</span>
               <br />
               <span>Stock: {stock}</span>
             </div>
           </div>
           <hr/>
-          <div className="card-footer">
-            <button className="card-button">
-              <Link to={`/item/${id}`} className="card-link">Ver más info</Link>
+          <div className="cardFooter">
+            <button className="cardButton">
+              <Link to={`/item/${id}`} className="cardLink">Ver más info</Link>
             </button>
           </div>
         </div>

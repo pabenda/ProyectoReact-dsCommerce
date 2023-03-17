@@ -33,9 +33,9 @@ const ItemDetail = ({ elems }) => {
       {elemFilter.map((elem) => (
         <div key={elem.id}>
           <div className="center">
-            <div className="card-main">
-              <div className="card-body">
-                <img className="product-image" src={productImage} />
+            <div className="cardMain">
+              <div className="cardBody">
+                <img className="productImage" src={productImage} />
                 <div className="stack">
                   <h2 className="heading">{elem.name}</h2>
                   <p className="text">{elem.description}</p>

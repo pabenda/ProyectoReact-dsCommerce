@@ -19,11 +19,11 @@ const Cart = () => {
 
   return (
     <>
-      <header className="encabezado-carro">
+      <header className="encabezadoCarro">
         <h2>Carro de Compras</h2>
       </header>
       {cart.length === 0 ? (
-        <div className="carro-vacio">
+        <div className="carroVacio">
           <p>Su carro se encuentra vacío</p>
         </div>
       ) : (
@@ -31,11 +31,11 @@ const Cart = () => {
           const itemSubtotal = item.price * item.quantity;
 
           return (
-            <div key={item.id} className="cart-container">
+            <div key={item.id} className="cartContainer">
               <div>
                 <h4>{item.name}</h4>
               </div>
-              <div className="detalles-articulo">
+              <div className="detallesArticulo">
                 <div>
                   <p>{`Precio Unit $${item.price}`}</p>
                   <p>{`Subtotal $${itemSubtotal.toFixed(2)}`}</p>
@@ -43,7 +43,7 @@ const Cart = () => {
                 <p>{`Cantidad: ${item.quantity}`}</p>
               </div>
               <div>
-                <button className="delete-button" onClick={() => handleDeleteItem(item.id)}>
+                <button className="deleteButton" onClick={() => handleDeleteItem(item.id)}>
                   Eliminar artículo
                 </button>
               </div>
@@ -52,8 +52,8 @@ const Cart = () => {
         })
       )}
       {cart.length > 0 && (
-        <div className="cart-total">
-          <p className="total-message">{`Total de la orden: $${total.toFixed(2)}`}</p>
+        <div className="cartTotal">
+          <p>{`Total de la orden: $${total.toFixed(2)}`}</p>
           <SendOrder />
         </div>
       )}
