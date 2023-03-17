@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import LinkBrand from '../events/LinkBrand';
 import LinkCatalog from '../events/LinkCatalog';
 import CartWidget from "./CartWidget";
