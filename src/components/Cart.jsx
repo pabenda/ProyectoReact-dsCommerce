@@ -1,23 +1,7 @@
-import {
-  FormControl,
-  FormLabel,
-  Input,
-  FormHelperText,
-  Button,
-  Container,
-  Box,
-  Textarea,
-  Center,
-  Heading,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Text,
-} from "@chakra-ui/react";
 import { useState, useContext } from "react";
 import { CartContext } from "../contexts/ShoppingCartContext";
 import SendOrder from "./SendOrder";
+import "../App.css";
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
@@ -35,49 +19,43 @@ const Cart = () => {
 
   return (
     <>
-      <Center bg="grey" h="70px" color="black">
-        <Heading as="h3" size="xl">
-          Carro de Compras
-        </Heading>
-      </Center>
+      <header className="encabezado-carro">
+        <h2>Carro de Compras</h2>
+      </header>
       {cart.length === 0 ? (
-        <Box bg="#D6EAF8" p={4} mt={4} maxW="sm" mx="auto">
-          <Text fontWeight="bold" fontSize="lg" mb={2}>
-            Su carro se encuentra vacío
-          </Text>
-        </Box>
+        <div className="carro-vacio">
+          <p>Su carro se encuentra vacío</p>
+        </div>
       ) : (
         cart.map((item) => {
           const itemSubtotal = item.price * item.quantity;
 
           return (
-            <Container key={item.id} className="main-catalogue">
-              <Card maxW="sm">
-                <CardHeader>
-                  <Heading size="md">{item.name}</Heading>
-                </CardHeader>
-                <CardBody>
-                  <Text as="b">Cantidad: {item.quantity}</Text>
-                  <Text>Precio Unit $ {item.price}</Text>
-                  <Text>Subtotal $ {itemSubtotal.toFixed(2)}</Text>
-                </CardBody>
-                <CardFooter>
-                  <Button colorScheme="red" onClick={() => handleDeleteItem(item.id)}>
-                    Eliminar artículo
-                  </Button>
-                </CardFooter>
-              </Card>
-            </Container>
+            <div key={item.id} className="cart-container">
+              <div>
+                <h4>{item.name}</h4>
+              </div>
+              <div className="detalles-articulo">
+                <div>
+                  <p>{`Precio Unit $${item.price}`}</p>
+                  <p>{`Subtotal $${itemSubtotal.toFixed(2)}`}</p>
+                </div>
+                <p>{`Cantidad: ${item.quantity}`}</p>
+              </div>
+              <div>
+                <button className="delete-button" onClick={() => handleDeleteItem(item.id)}>
+                  Eliminar artículo
+                </button>
+              </div>
+            </div>
           );
         })
       )}
       {cart.length > 0 && (
-        <Box bg="#D6EAF8" p={4} mt={4} maxW="sm" mx="auto">
-          <Text fontWeight="bold" fontSize="lg" mb={2}>
-            Total de la orden: $ {total.toFixed(2)}
-          </Text>
+        <div className="cart-total">
+          <p className="total-message">{`Total de la orden: $${total.toFixed(2)}`}</p>
           <SendOrder />
-        </Box>
+        </div>
       )}
     </>
   );

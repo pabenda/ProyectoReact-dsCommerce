@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../App.css";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
 
 const SendOrder = () => {
