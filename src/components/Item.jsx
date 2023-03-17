@@ -14,10 +14,10 @@ const Item = ({ id, name, stock, category }) => {
               <h4 className="card-title">{name}</h4>
               <span className="card-category">Cat: {category}</span>
               <br />
-              <span className="card-stock">Stock: {stock}</span>
+              <span>Stock: {stock}</span>
             </div>
           </div>
-          <hr className="card-divider" />
+          <hr/>
           <div className="card-footer">
             <button className="card-button">
               <Link to={`/item/${id}`} className="card-link">Ver más info</Link>

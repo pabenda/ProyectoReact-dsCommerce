@@ -1,16 +1,6 @@
-import {
-  Center,
-  Card,
-  CardBody,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  CardFooter,
-  Divider,
-} from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
+import "../App.css";
 
 import { useEffect, useState } from "react";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
@@ -42,37 +32,29 @@ const ItemDetail = ({ elems }) => {
     <>
       {elemFilter.map((elem) => (
         <div key={elem.id}>
-          <Center p="1rem">
-            <Card className="card-main">
-              <CardBody>
-                <Image borderRadius="lg" src={productImage} />
-                <Stack mt="6" spacing="3">
-                  <Heading size="md">{elem.name}</Heading>
-                  <Text color="blue.800" fontSize="l">
-                    Detalle: {elem.description}
-                  </Text>
-                  <Text color="blue.800" fontSize="l">
-                    Categoría: {elem.category}
-                  </Text>
-                  <Text color="red.600" fontSize="xl">
-                    Stock: {elem.stock}
-                  </Text>
-                  <Text color="green.600" fontSize="xl">
-                    Precio: $ {elem.price}
-                  </Text>
-                </Stack>
-              </CardBody>
-              <Divider />
-              <CardFooter className="card-footer">
+          <div className="center">
+            <div className="card-main">
+              <div className="card-body">
+                <img className="product-image" src={productImage} />
+                <div className="stack">
+                  <h2 className="heading">{elem.name}</h2>
+                  <p className="text">{elem.description}</p>
+                  <p className="text">{elem.category}</p>
+                  <p className="text">Stock: {elem.stock}</p>
+                  <p className="text">Precio: $ {elem.price}</p>
+                </div>
+              </div>
+              <hr className="divider" />
+              <div className="card-footer">
                 <ItemCount
                   stock={elem.stock}
                   id={elem.id}
                   price={elem.price}
                   name={elem.name}
                 />
-              </CardFooter>
-            </Card>
-          </Center>
+              </div>
+            </div>
+          </div>
         </div>
       ))}
     </>

@@ -239,59 +239,158 @@
     padding: 16px;
     display: flex;
     justify-content: center;
-  }
-  
-  .card {
+}
+
+.card {
     border-radius: lg;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: 640px;
-  }
-  
-  .card-body {
+}
+
+.card-body {
     padding: 16px;
-  }
-  
-  .card-image {
+}
+
+.card-image {
     border-radius: lg;
     width: 100%;
     height: auto;
-  }
-  
-  .card-content {
+}
+
+.card-content {
     margin-top: 3px;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  .card-category,
-  .card-stock {
+}
+
+.card-category,
+.card-stock {
     color: aliceblue;
     font-size: 16px;
-  }
-    
-  .card-footer {
+}
+
+.card-footer {
     padding: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 16px;
-  }
-  
-  .card-button {
+}
+
+.card-button {
     font-size: 14px;
     background-color: rgb(23, 235, 23);
     color: aliceblue;
     border-radius: 5px;
     padding: 8px 12px;
     font-weight: 500;
-  }
-  
-  .card-link {
+}
+
+.card-link {
     text-decoration: none;
     color: aliceblue;
+}
+
+.item-count {
+    display: flex;
+    align-items: center;
+}
+
+.item-count__boton {
+    border: 1px solid black;
+    padding: 2% 2%;
+    margin: 1%;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+.item-count__boton:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.item-count__contador {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item-count__agrega {
+    background-color: blue;
+    color: aliceblue;
+    padding: 1% 1%;
+    cursor: pointer;
+}
+
+.item-count__agregar:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
   }
   
+  .card-main {
+    background-color: cadetblue;
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    width: 30%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+  }
+  
+  .product-image {
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .stack {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1%;
+  }
+  
+  .text {
+    font-size: 18px;
+    margin-bottom: 1%;
+    font-weight: 500;
+  }
+  
+  .divider {
+    border-top: 1px solid cadetblue;
+    margin: 1%;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+  }
+  
+

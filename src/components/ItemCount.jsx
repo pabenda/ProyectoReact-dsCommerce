@@ -1,15 +1,6 @@
 import { useContext, useState } from "react";
-import {
-  Text,
-  ButtonGroup,
-  IconButton,
-  Tooltip,
-  Center,
-  Button,
-  Flex,
-} from "@chakra-ui/react";
-import { AddIcon, MinusIcon, RepeatIcon } from "@chakra-ui/icons";
 import { CartContext } from "../contexts/ShoppingCartContext";
+import "../App.css";
 
 const ItemCount = ({ stock, id, price, name }) => {
   const [cart, setCart] = useContext(CartContext);
@@ -46,38 +37,33 @@ const ItemCount = ({ stock, id, price, name }) => {
 
   return (
     <>
-      <Flex alignItems="center">
-        <ButtonGroup size="sm" isAttached variant="outline">
-          {count < 1 ? (
-            <Tooltip label="mínimo de stock" placement="bottom">
-              <IconButton icon={<MinusIcon />} isDisabled />
-            </Tooltip>
-          ) : (
-            <IconButton icon={<MinusIcon />} onClick={substractQty} />
-          )}
-          <Center>
-            <Button
-              onClick={() => addToCart()}
-              variant="solid"
-              colorScheme="blue"
-            >
-              Comprar {count}
-            </Button>
-          </Center>
-          {count < stock ? (
-            <IconButton icon={<AddIcon />} onClick={addQty} />
-          ) : (
-            <Tooltip label="límite de stock" placement="bottom">
-              <IconButton icon={<AddIcon />} isDisabled />
-            </Tooltip>
-          )}
-        </ButtonGroup>
-        <ButtonGroup size="sm" ml={2}>
-          <Tooltip label="Reset count" placement="bottom">
-            <IconButton icon={<RepeatIcon />} onClick={resetCount} />
-          </Tooltip>
-        </ButtonGroup>
-      </Flex>
+      <div className="item-count">
+        <button
+          className="item-count__boton"
+          disabled={count < 1}
+          onClick={substractQty}
+        >
+          -
+        </button>
+        <span className="item-count__contador">{count}</span>
+        <button
+          className="item-count__boton"
+          disabled={count >= stock}
+          onClick={addQty}
+        >
+          +
+        </button>
+        <button className="item-count__boton" onClick={resetCount}>
+          Reset
+        </button>
+        <button
+          className="item-count__agrega"
+          onClick={addToCart}
+          disabled={count < 1 || count > stock}
+        >
+          Agregar al Carro
+        </button>
+      </div>
     </>
   );
 };
