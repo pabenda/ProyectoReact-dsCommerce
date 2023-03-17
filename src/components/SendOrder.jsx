@@ -27,7 +27,7 @@ const SendOrder = () => {
 
   return (
     <div className="sendOrderContainer">
-      <h1 className="sendOrderTitle">Enviar Orden</h1>
+      <h1 className="sendOrderTitle">Comlete los datos para enviar su Orden:</h1>
 
       <div className="sendOrderFormContainer">
         <form onSubmit={handleSubmit} className="sendOrderForm">

@@ -6,11 +6,11 @@ const ItemCount = ({ stock, id, price, name }) => {
   const [cart, setCart] = useContext(CartContext);
   const [count, setCount] = useState(1);
 
-  const addQty = () => {
+  const sumarQ = () => {
     setCount(count + 1);
   };
 
-  const substractQty = () => {
+  const restarQ = () => {
     setCount(count - 1);
   };
 
@@ -41,7 +41,7 @@ const ItemCount = ({ stock, id, price, name }) => {
         <button
           className="item-count__boton"
           disabled={count < 1}
-          onClick={substractQty}
+          onClick={restarQ}
         >
           -
         </button>
@@ -49,7 +49,7 @@ const ItemCount = ({ stock, id, price, name }) => {
         <button
           className="item-count__boton"
           disabled={count >= stock}
-          onClick={addQty}
+          onClick={sumarQ}
         >
           +
         </button>
