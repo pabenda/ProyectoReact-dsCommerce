@@ -1,16 +1,5 @@
-import {
-  Container,
-  Heading,
-  Stack,
-  Input,
-  Button,
-  Text,
-  Center,
-  FormControl,
-  FormLabel,
-} from "@chakra-ui/react";
-import { collection, getFirestore, addDoc } from "firebase/firestore";
 import { useState } from "react";
+import { collection, getFirestore, addDoc } from "firebase/firestore";
 
 const SendOrder = () => {
   const [orderId, setOrderId] = useState(null);
@@ -36,35 +25,34 @@ const SendOrder = () => {
   };
 
   return (
-    <div>
-      <Center>
-        <Heading>Enviar Orden</Heading>
-      </Center>
+    <div className="sendOrderContainer">
+      <h1 className="sendOrderTitle">Enviar Orden</h1>
 
-      <Container>
-        <FormControl display="flex" flexWrap="wrap">
-          <form onSubmit={handleSubmit}>
-            <FormLabel>Nombre Completo</FormLabel>
-            <Input size="md" flex="1" onChange={(e) => setName(e.target.value)} />
-            <FormLabel ml={3}>Mail</FormLabel>
-            <Input size="md" flex="1" onChange={(e) => setEmail(e.target.value)} />
-            <Button colorScheme="blue" type="submit" m={5} mr={3}>
-              Enviar Información
-            </Button>
-          </form>
-        </FormControl>
-      </Container>
+      <div className="sendOrderFormContainer">
+        <form onSubmit={handleSubmit} className="sendOrderForm">
+          <label htmlFor="name" className="sendOrderFormLabel">
+            Nombre Completo
+          </label>
+          <input type="text" id="name" className="sendOrderFormInput" onChange={(e) => setName(e.target.value)} />
 
-      <Center>
-        <Text as="b" m={3} fontSize="xl">
-          Orden ID:{" "}
-        </Text>
-        <Text as="mark" fontSize="2xl">
-          {orderId}
-        </Text>
-      </Center>
+          <label htmlFor="email" className="sendOrderFormLabel">
+            Correo Electrónico
+          </label>
+          <input type="email" id="email" className="sendOrderFormInput" onChange={(e) => setEmail(e.target.value)} />
+
+          <button type="submit" className="sendOrderFormButton">
+            Enviar Información
+          </button>
+        </form>
+      </div>
+
+      <div className="sendOrderIDContainer">
+        <p className="sendOrderIDLabel">Orden ID:</p>
+        <mark className="sendOrderID">{orderId}</mark>
+      </div>
     </div>
   );
 };
 
 export default SendOrder;
+
