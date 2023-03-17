@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LinkFila from '../events/LinkFila';
 import LinkImpre from '../events/LinkImpre';
 import LinkRepue from '../events/LinkRepue';

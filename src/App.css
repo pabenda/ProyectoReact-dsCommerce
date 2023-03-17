@@ -392,5 +392,15 @@
     align-items: center;
     padding: 1%;
   }
+
+  .catprincipal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1%;
+    color: aliceblue;
+    padding: 1%;
+  }
+  
   
 
